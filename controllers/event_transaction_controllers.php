@@ -173,17 +173,6 @@ function addTransaction(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /**
  * @param $val
  * @return string
