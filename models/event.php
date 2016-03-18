@@ -31,6 +31,17 @@ class events extends adb_object{
         return $this->query($str_query);
     }
 
+    /**
+     * @return bool
+     */
+    function getAllEvents(){
+        $str_query = "SELECT * FROM
+                      event E INNER JOIN event_schedule ES
+                      ON E.event_id = ES.event_id";
+
+        return $this->query($str_query);
+    }
+
 
     /**
      * @param $event

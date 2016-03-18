@@ -44,6 +44,6 @@ class user extends adb_object{
 
         $str_query = "SELECT * FROM users
                       WHERE email = '$email'
-                      AND password = MD5('$password')";
+                      AND password = PASSWORD('$password')";
     }
 }
