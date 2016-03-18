@@ -15,7 +15,7 @@
     <script src="js/modernizr.custom.js"></script>
 </head>
 <body style="background-color: #4A4B4D">
-<div class="container" style="background-color: #4A4B4D">
+<div class="container" style="background-color: whitesmoke">
     <!-- Top Navigation -->
     <div class="codrops-top clearfix">
         <!--<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/PageLoadingEffects/"><span>Previous Demo</span></a>-->
@@ -23,7 +23,9 @@
     </div>
     <header class="codrops-header">
 
-        <h1 style="margin-top: 120px">UTICK</h1>
+        <h1 style="margin-top: 120px">
+            <img src="images/utick.png">
+        </h1>
         <!--<p>Inspiration for revealing content by morphing the action element. Examples:</p>-->
         <nav class="codrops-demos">
             <!--<a class="current-demo" href="login_SignUp.html">Login/Signup</a>-->
@@ -34,7 +36,7 @@
         <div class="mockup-content">
             <!--<p>Pea horseradish azuki bean lettuce avocado asparagus okra.</p>-->
             <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
-                <button type="button" style="background-color: white; color: #A61E24">Login</button>
+                <button type="button" style="background-color: #4A4B4D; color: white">Login</button>
                 <div class="morph-content" style="background-color: white">
                     <div>
                         <div class="content-style-form content-style-form-1">
@@ -53,7 +55,7 @@
             </div><!-- morph-button -->
             <strong class="joiner">or</strong>
             <div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
-                <button type="button" style="background-color: white; color: #A61E24">Signup</button>
+                <button type="button" style="background-color: #4A4B4D; color: white">Signup</button>
                 <div class="morph-content" style="background-color: white">
                     <div>
                         <div class="content-style-form content-style-form-3">
@@ -77,7 +79,7 @@
     </section>
     <section class="related">
     <p><small>Terms and conditions apply.</small></p>
-        <p><a href="#">HOME</a></p>
+        <p><a href="index.php">HOME</a></p>
     <!--<a href="http://tympanus.net/Development/ProgressButtonStyles/">-->
     <!--<img src="http://tympanus.net/codrops/wp-content/uploads/2013/12/ProgressButtonStyles-300x162.png" />-->
     <!--<h3>Progress Button Styles</h3>-->
