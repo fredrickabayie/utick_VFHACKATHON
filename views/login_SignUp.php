@@ -8,11 +8,11 @@
     <!--<meta name="description" content="Morphing Buttons Concept: Inspiration for revealing content by morphing the action element" />-->
     <!--<meta name="keywords" content="expanding button, morph, modal, fullscreen, transition, ui" />-->
     <!--<link rel="shortcut icon" href="../favicon.ico">-->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/component.css"/>
-    <link rel="stylesheet" type="text/css" href="css/content.css"/>
-    <script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/content.css"/>
+    <script src="../js/modernizr.custom.js"></script>
 </head>
 <body style="background-color: #4A4B4D">
 <div class="container" style="background-color: whitesmoke">
@@ -24,7 +24,7 @@
     <header class="codrops-header">
 
         <h1 style="margin-top: 120px">
-            <img src="images/utick.png">
+            <img src="../images/utick.png">
         </h1>
         <!--<p>Inspiration for revealing content by morphing the action element. Examples:</p>-->
         <nav class="codrops-demos">
@@ -90,8 +90,8 @@
     <!--</a>-->
     </section>
 </div><!-- /container -->
-<script src="js/classie.js"></script>
-<script src="js/uiMorphingButton_fixed.js"></script>
+<script src="../js/classie.js"></script>
+<script src="../js/uiMorphingButton_fixed.js"></script>
 <script>
     (function () {
         var docElem = window.document.documentElement, didScroll, scrollPosition;

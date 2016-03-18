@@ -6,27 +6,13 @@
     <!--    <meta name="description" content="">-->
     <!--    <meta name="author" content="">-->
     <title>UTICK</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-    <!--    <style type="text/css">-->
-    <!--        button {-->
-    <!--            background-color: #A61E24;-->
-    <!--        }-->
-    <!--    </style>-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/price-range.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,7 +23,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="index.php"><img src="images/utick.png" style="width: 80px" alt=""/></a>
+                        <a href="index.php"><img src="../images/utick.png" style="width: 80px" alt=""/></a>
                     </div>
 
                 </div>
@@ -106,8 +92,8 @@
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="images/home/girl1.jpg" class="girl img-responsive" alt=""/>
-                                <img src="images/home/pricing.png" class="pricing" alt=""/>
+                                <img src="../images/home/girl1.jpg" class="girl img-responsive" alt=""/>
+                                <img src="../images/home/pricing.png" class="pricing" alt=""/>
                             </div>
                         </div>
                         <div class="item">
@@ -119,8 +105,8 @@
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="images/home/girl2.jpg" class="girl img-responsive" alt=""/>
-                                <img src="images/home/pricing.png" class="pricing" alt=""/>
+                                <img src="../images/home/girl2.jpg" class="girl img-responsive" alt=""/>
+                                <img src="../images/home/pricing.png" class="pricing" alt=""/>
                             </div>
                         </div>
 
@@ -133,8 +119,8 @@
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="images/home/girl3.jpg" class="girl img-responsive" alt=""/>
-                                <img src="images/home/pricing.png" class="pricing" alt=""/>
+                                <img src="../images/home/girl3.jpg" class="girl img-responsive" alt=""/>
+                                <img src="../images/home/pricing.png" class="pricing" alt=""/>
                             </div>
                         </div>
 
@@ -177,6 +163,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -207,15 +194,27 @@
                             <div id="womens" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul>
-                                        <li><a href="#">Action</a></li>
+                                        <li><a href="movies_shop.php">
+                                                Movies
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">
+                                        Family
+                                    </a></h4>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="shipping text-center"><!--shipping-->
-                        <img src="images/home/shipping.jpg" alt=""/>
+                        <img src="../images/home/shipping.jpg" alt=""/>
                     </div><!--/shipping-->
 
                 </div>
@@ -224,25 +223,25 @@
             <div class="col-sm-9 padding-right">
                 <div class="features_items displayEvents"><!--features_items-->
                     <h2 class="title text-center">Features Items</h2>
-                    <!--                    <div class="col-sm-4">-->
-                    <!--                        <div class="product-image-wrapper">-->
-                    <!--                            <div class="single-products">-->
-                    <!--                                <div class="productinfo text-center">-->
-                    <!--                                    <img src="images/home/product1.jpg" alt=""/>-->
-                    <!--                                    <h2>$56</h2>-->
-                    <!--                                    <p>Easy Polo Black Edition</p>-->
-                    <!--                                    <a href="event_details.php" class="btn btn-default add-to-cart"><i-->
-                    <!--                                            class="fa fa-search"></i>View Details</a>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="choose">-->
-                    <!--                                <ul class="nav nav-justified">-->
-                    <!--                                    <li><a href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a></li>-->
-                    <!--                                    <!--                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>-->
-                    <!--                                </ul>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
+                    <!--                                        <div class="col-sm-4">-->
+                    <!--                                            <div class="product-image-wrapper">-->
+                    <!--                                                <div class="single-products">-->
+                    <!--                                                    <div class="productinfo text-center">-->
+                    <!--                                                        <img src="images/home/product1.jpg" alt=""/>-->
+                    <!--                                                        <h2>$56</h2>-->
+                    <!--                                                        <p>Easy Polo Black Edition</p>-->
+                    <!--                                                        <a href="event_details.php" class="btn btn-default add-to-cart"><i-->
+                    <!--                                                                class="fa fa-search"></i>View Details</a>-->
+                    <!--                                                    </div>-->
+                    <!--                                                </div>-->
+                    <!--                                                <div class="choose">-->
+                    <!--                                                    <ul class="nav nav-justified">-->
+                    <!--                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a></li>-->
+                    <!--                                                        <!--                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>-->
+                    <!--                                                    </ul>-->
+                    <!--                                                </div>-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
                     <!--                    <div class="col-sm-4">-->
                     <!--                        <div class="product-image-wrapper">-->
                     <!--                            <div class="single-products">-->
@@ -353,12 +352,13 @@
 </footer><!--/Footer-->
 
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/price-range.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/main.js"></script>
-<script type="text/javascript" src="js/app/event_transaction_controller.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/price-range.js"></script>
+<script src="../js/jquery.prettyPhoto.js"></script>
+<script src="../js/main.js"></script>
+<script type="text/javascript" src="../js/app/eventHhandler.js"></script>
+<!--<script type="text/javascript" src="js/app/event_transaction_controller.js"></script>-->
 </body>
 </html>
