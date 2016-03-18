@@ -9,8 +9,9 @@
 require_once '../Smsgh/Api.php';
 
 
-
-
+/**
+ * @return MessagingApi
+ */
 function setupSMS(){
     //$auth = new BasicAuth("yralkzfn", "znbzlsho");
 
@@ -22,6 +23,10 @@ function setupSMS(){
 }
 
 
+/**
+ * @param $phone
+ * @param $message
+ */
 function sendSMS($phone, $message){
     $messagingApi = setupSMS();
     try{
@@ -36,6 +41,3 @@ function sendSMS($phone, $message){
         echo $ex->getTraceAsString();
     }
 }
-
-
-sendSMS("+200393945", "testing");
