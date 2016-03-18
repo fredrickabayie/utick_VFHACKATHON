@@ -36,7 +36,7 @@ if(filter_input (INPUT_GET, 'cmd')){
             break;
         case 4:
             /**
-             *
+             * Add Receipts
              */
 
 
@@ -113,7 +113,7 @@ function purchase(){
 }
 
 /**
- *
+ * Function for adding a receipt
  */
 function addReceipt(){
 
@@ -124,7 +124,7 @@ function addReceipt(){
         $user = sanitize_string(filter_input (INPUT_GET, 'user'));
 
         if($obj->addReceipt($totalCost, $user)){
-            $_SESSION['receipt_id'];
+            $_SESSION['receipt_id'] = $obj->get_insert_id();
             echo '{"result":1,"message": "receipt added"}';
         }else{
             echo '{"result":0,"message": "unsuccesful transaction"}';
@@ -133,10 +133,52 @@ function addReceipt(){
 }
 
 
-
+/**
+ * Function for individual transactions
+ */
 function addTransaction(){
+    if(filter_input(INPUT_GET, 'schedule_no')){
 
+        $obj = get_transaction_model();
+        $events = get_event_model();
+
+        $receipt_id = $_SESSION['receipt_id'];
+        $sch_no = sanitize_string(filter_input (INPUT_GET, 'schedule_no'));
+
+        if($obj->addTransaction($receipt_id, $sch_no)){
+
+            $events->getSeats($sch_no);
+
+            $row = $events->fetch();
+
+            $seats = $row['seats'];
+
+            /** Update Seats Available */
+            $events->updateSeats($sch_no, $seats-1);
+
+            if(filter_input(INPUT_GET, 'seat_no')){
+
+                $seat_no = sanitize_string(filter_input (INPUT_GET, 'seat_no'));
+
+                $trans_id = $obj->get_insert_id();
+                if($obj->assignSeat($trans_id, $seat_no )){
+                    echo '{"result":1,"message": "seats assigned"}';
+                }
+            }
+            echo '{"result":1,"message": "transaction added"}';
+        }else{
+            echo '{"result":0,"message": "query unsuccessful"}';
+        }
+    }
 }
+
+
+
+
+
+
+
+
 
 
 

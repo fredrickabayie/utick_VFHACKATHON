@@ -85,4 +85,16 @@ class events extends adb_object{
 
         return $this->query($str_query);
     }
+
+
+    /**
+     * @param $schedule_no
+     * @return bool
+     */
+    function getSeats($schedule_no){
+        $str_query = "SELECT * FROM event_schedule
+                      WHERE schedule_no = $schedule_no";
+
+        return $this->query($str_query);
+    }
 }

@@ -83,6 +83,16 @@ class transactions extends adb_object{
                       ON ES.event_id = E.event_id
                       WHERE T.receipt_id = $receipt";
 
+
+        return $this->query($str_query);
+    }
+
+    function setSeatNumber($transaction_id, $seat_no){
+        $str_query = "INSERT INTO seat_assignment
+                      SET transaction_id = $transaction_id,
+                      seat_no = '$seat_no'";
+
+        return $this->query($str_query);
     }
 
 
