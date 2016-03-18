@@ -55,15 +55,15 @@ class transactions extends adb_object{
 
     /**
      * @param $receipt_id
-     * @param $event_id
+     * @param $schedule_no
      * @return bool
      */
-    function addTransaction($receipt_id, $event_id){
+    function addTransaction($receipt_id, $schedule_no){
 
         $str_query = "INSERT INTO transactions
                       SET
                       receipt_id = $receipt_id,
-                      event_id = $event_id";
+                      schedule_no = $schedule_no";
 
         return $this->query($str_query);
     }
@@ -77,10 +77,10 @@ class transactions extends adb_object{
         $str_query = "SELECT * FROM
                       transactions T INNER JOIN receipts R
                       ON T.receipt_id = R.receipt_id
-                      INNER JOIN event E
-                      ON T.event_id = E.event_id
                       INNER JOIN event_schedule ES
-                      ON E.event_id = ES.event_id
+                      ON T.schedule_no = ES.schedule_no
+                      INNER JOIN event E
+                      ON ES.event_id = E.event_id
                       WHERE T.receipt_id = $receipt";
 
     }

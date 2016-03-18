@@ -1,0 +1,7 @@
+/***
+Search URL
+
+http://localhost/vf_hackathon/utick_VFHACKATHON/controllers/event_transaction_controllers.php?cmd=2&st=Vodafone
+
+View Events
+http://localhost/vf_hackathon/utick_VFHACKATHON/controllers/event_transaction_controllers.php?cmd=1

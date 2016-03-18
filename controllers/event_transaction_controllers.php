@@ -26,7 +26,7 @@ if(filter_input (INPUT_GET, 'cmd')){
              * Search Events
              */
 
-
+            searchEvents();
             break;
         case 3:
             /**
@@ -71,7 +71,9 @@ function viewEvents(){
     }
 }
 
-
+/**
+ *
+ */
 function searchEvents(){
     if(filter_input (INPUT_GET, 'st')){
 
@@ -96,9 +98,24 @@ function searchEvents(){
 }
 
 
+
 function purchase(){
 
+    if( filter_input (INPUT_GET, 'rec_id') && filter_input (INPUT_GET, 'sch_no')
+        && filter_input(INPUT_GET, 'totalCost') && filter_input(INPUT_GET, 'user')){
+
+
+    }
+
+    /**
+     * Connect To VF Cash First
+     * First send reciept
+     * Then send individual Transactions
+     * Then update seat number via schedule no
+     *
+     */
 }
+
 
 
 
