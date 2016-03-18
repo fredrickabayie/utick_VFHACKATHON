@@ -1,12 +1,6 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
 
-/**
- * Created by PhpStorm.
- * User: StreetHustling
- * Date: 2/5/16
- * Time: 8:45 PM
- */
 
 define("DB_HOST", 'localhost');
 
