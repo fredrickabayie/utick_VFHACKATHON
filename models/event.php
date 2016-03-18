@@ -59,4 +59,19 @@ class events extends adb_object{
 
         return $this->query($str_query);
     }
+
+
+    /**
+     * @param $schedule_no
+     * @param $seats
+     * @return bool
+     */
+    function updateSeatNumber($schedule_no, $seats){
+
+        $str_query = "UPDATE event_schedule
+                      SET seats = $seats
+                      WHERE schedule_no = $schedule_no";
+
+        return $this->query($str_query);
+    }
 }
