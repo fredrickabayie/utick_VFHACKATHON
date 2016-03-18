@@ -172,7 +172,7 @@
                             <div id="sportswear" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul>
-                                        <li><a href="#">Vodafone Live</a></li>
+                                        <li><a href="#">Vodafone Icons</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -231,7 +231,7 @@
                                     <img src="images/home/product1.jpg" alt=""/>
                                     <h2>$56</h2>
                                     <p>Easy Polo Black Edition</p>
-                                    <a href="event_details.html" class="btn btn-default add-to-cart"><i class="fa fa-search"></i>View Details</a>
+                                    <a href="event_details.php" class="btn btn-default add-to-cart"><i class="fa fa-search"></i>View Details</a>
                                 </div>
                             </div>
                             <div class="choose">
