@@ -101,11 +101,7 @@ function searchEvents(){
 
 function purchase(){
 
-    if( filter_input (INPUT_GET, 'rec_id') && filter_input (INPUT_GET, 'sch_no')
-        && filter_input(INPUT_GET, 'totalCost') && filter_input(INPUT_GET, 'user')){
 
-
-    }
 
     /**
      * Connect To VF Cash First
@@ -114,6 +110,32 @@ function purchase(){
      * Then update seat number via schedule no
      *
      */
+}
+
+/**
+ *
+ */
+function addReceipt(){
+
+    if(filter_input(INPUT_GET, 'totalCost') && filter_input(INPUT_GET, 'user')){
+
+        $obj = get_transaction_model();
+        $totalCost = sanitize_string(filter_input (INPUT_GET, 'totalCost'));
+        $user = sanitize_string(filter_input (INPUT_GET, 'user'));
+
+        if($obj->addReceipt($totalCost, $user)){
+            $_SESSION['receipt_id'];
+            echo '{"result":1,"message": "receipt added"}';
+        }else{
+            echo '{"result":0,"message": "unsuccesful transaction"}';
+        }
+    }
+}
+
+
+
+function addTransaction(){
+
 }
 
 
