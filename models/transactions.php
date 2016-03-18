@@ -15,9 +15,9 @@ class transactions extends adb_object{
     /**
      * transactions constructor.
      */
-    function transactions(){
-
-    }
+//    function transactions(){
+//
+//    }
 
     /**
      * @param $total

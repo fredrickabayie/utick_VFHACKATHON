@@ -14,9 +14,9 @@ class user extends adb_object{
     /**
      * user constructor.
      */
-    function user(){
-
-    }
+//    function user(){
+//
+//    }
 
     /**
      * @param $email
