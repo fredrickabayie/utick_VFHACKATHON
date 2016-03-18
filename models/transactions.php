@@ -12,6 +12,9 @@ require_once 'adb_object.php';
 class transactions extends adb_object{
 
 
+    /**
+     * transactions constructor.
+     */
     function transactions(){
 
     }
@@ -33,6 +36,28 @@ class transactions extends adb_object{
     }
 
 
+    /**
+     * @param $trans_id
+     * @param $seat_no
+     * @return bool
+     */
+    function assignSeat($trans_id, $seat_no){
+
+        $str_query = "INSERT INTO seat_assignment
+                      SET
+                      transaction_id = $trans_id,
+                      seat_no = $seat_no";
+
+
+        return $this->query($str_query);
+    }
+
+
+    /**
+     * @param $receipt_id
+     * @param $event_id
+     * @return bool
+     */
     function addTransaction($receipt_id, $event_id){
 
         $str_query = "INSERT INTO transactions
