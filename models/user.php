@@ -39,11 +39,14 @@ class user extends adb_object{
     /**
      * @param $email
      * @param $password
+     * @return bool
      */
     function loginUser($email, $password){
 
         $str_query = "SELECT * FROM users
                       WHERE email = '$email'
                       AND password = PASSWORD('$password')";
+
+        return $this->query($str_query);
     }
 }

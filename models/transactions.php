@@ -29,7 +29,7 @@ class transactions extends adb_object{
         $str_query = "INSERT INTO receipts
                       SET
                       total_cost = $total,
-                      user_email = $user_email,
+                      user_email = '$user_email',
                       date = NOW()";
 
         return $this->query($str_query);
@@ -97,3 +97,10 @@ class transactions extends adb_object{
 
 
 }
+
+//$obj = new transactions();
+//if($obj->addReceipt(200,'fredrick.abayie@ashesi.edu.gh')){
+//    echo "Worked";
+//}else{
+//    echo "Failed";
+//}

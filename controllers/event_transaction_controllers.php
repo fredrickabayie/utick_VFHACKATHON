@@ -32,14 +32,13 @@ if(filter_input (INPUT_GET, 'cmd')){
             /**
              * Add Transactions
              */
-
+            addTransaction();
             break;
         case 4:
             /**
              * Add Receipts
              */
-
-
+            addReceipt();
             break;
         default:
             echo '{"result":0, "message":"Invalid Command Entered"}';
@@ -117,10 +116,10 @@ function purchase(){
  */
 function addReceipt(){
 
-    if(filter_input(INPUT_GET, 'totalCost') && filter_input(INPUT_GET, 'user')){
+    if(filter_input(INPUT_GET, 'total') && filter_input(INPUT_GET, 'user')){
 
         $obj = get_transaction_model();
-        $totalCost = sanitize_string(filter_input (INPUT_GET, 'totalCost'));
+        $totalCost = sanitize_string(filter_input (INPUT_GET, 'total'));
         $user = sanitize_string(filter_input (INPUT_GET, 'user'));
 
         if($obj->addReceipt($totalCost, $user)){

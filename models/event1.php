@@ -6,19 +6,16 @@
  * Time: 12:54 AM
  */
 
-require_once 'adb_object.php';
+require_once 'Adb.php';
 
 
-class events extends adb_object{
+class Events extends Adb{
 
-
-    function events(){
-
-    }
 
     public function __destruct()
     {
         // TODO: Implement __destruct() method.
+
 
     }
 
@@ -32,9 +29,15 @@ class events extends adb_object{
         $str_query = "SELECT * FROM
                       event E INNER JOIN event_schedule ES
                       ON E.event_id = ES.event_id
-                      WHERE E.category = '$category'";
+                      WHERE E.category = ?";
 
-        return $this->query($str_query);
+        if ($statement = $this->prepare($str_query)) {
+            $statement->bind_param("s", $category);
+            $statement->execute();
+            return $statement->get_result();
+        }
+        $statement->close();
+        return false;
     }
 
     /**
@@ -45,7 +48,12 @@ class events extends adb_object{
                       event E INNER JOIN event_schedule ES
                       ON E.event_id = ES.event_id";
 
-        return $this->query($str_query);
+        if ($statement = $this->prepare($str_query)) {
+            $statement->execute();
+            return $statement->get_result();
+        }
+        $statement->close();
+        return false;
     }
 
 
@@ -57,9 +65,15 @@ class events extends adb_object{
         $str_query = "SELECT * FROM
                       event E INNER JOIN event_schedule ES
                       ON E.event_id = ES.event_id
-                      WHERE E.name LIKE '%$event%'";
+                      WHERE E.name LIKE ?";
 
-        return $this->query($str_query);
+        if ($statement = $this->prepare($str_query)) {
+            $statement->bind_param("s", $event);
+            $statement->execute();
+            return $statement->get_result();
+        }
+        $statement->close();
+        return false;
     }
 
 
@@ -72,9 +86,15 @@ class events extends adb_object{
         $str_query = "SELECT * FROM
                       event E INNER JOIN event_schedule ES
                       ON E.event_id = ES.event_id
-                      WHERE E.event_id = $id";
+                      WHERE E.event_id = ?";
 
-        return $this->query($str_query);
+        if ($statement = $this->prepare($str_query)) {
+            $statement->bind_param("i", $id);
+            $statement->execute();
+            return $statement->get_result();
+        }
+        $statement->close();
+        return false;
     }
 
 
@@ -104,3 +124,7 @@ class events extends adb_object{
         return $this->query($str_query);
     }
 }
+
+
+
+

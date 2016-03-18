@@ -1,7 +1,15 @@
 /***
-Search URL
+Search Events
 
-http://localhost/vf_hackathon/utick_VFHACKATHON/controllers/event_transaction_controllers.php?cmd=2&st=Vodafone
+http://10.249.167.230/vf_hackathon/utick_VFHACKATHON/controllers/event_transaction_controllers.php?cmd=2&st=Vodafone
 
 View Events
-http://localhost/vf_hackathon/utick_VFHACKATHON/controllers/event_transaction_controllers.php?cmd=1
+http://10.249.167.230/vf_hackathon/utick_VFHACKATHON/controllers/event_transaction_controllers.php?cmd=1
+
+
+User Signup
+http://10.249.167.230/vf_hackathon/utick_VFHACKATHON/controllers/user_controller.php?cmd=1&email=kenneth.mensah62@gmail.com&pass=pass&phone=+233200393945
+
+
+User Login:
+http://10.249.167.230/vf_hackathon/utick_VFHACKATHON/controllers/user_controller.php?cmd=2&email=kenneth.mensah62@gmail.com&pass=pass
