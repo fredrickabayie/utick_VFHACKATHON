@@ -784,7 +784,7 @@
 				<li class="legend__item legend__item--reserved">Reserved</li>
 				<li class="legend__item legend__item--selected">Selected</li>
 			</ul>
-			<a class="action action--buy" href="">Buy tickets</a>
+			<a class="action action--buy" href="../../controllers/vf_interface.php">Buy tickets</a>
 		</div><!-- /plan -->
 		<button class="action action--lookaround action--disabled" arial-label="Unlook View"></button>
 		<script src="js/classie.js"></script>

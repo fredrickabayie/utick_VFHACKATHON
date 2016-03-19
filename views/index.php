@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once 'Twig-1.x/lib/Twig/Autoloader.php';
 
 require_once '../models/event.php';
@@ -22,9 +24,6 @@ $event->getAllEvents();
 $row = $event->fetch_all();
 
 $params['events'] = $row;
-
-
-
 
 
 $template->display($params);

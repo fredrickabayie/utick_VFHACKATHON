@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: StreetHustling
@@ -29,6 +30,8 @@ if(isset($_REQUEST['id'])) {
     $event = new events();
     $event->viewEventDetails($id);
     $row = $event->fetch();
+
+    $_SESSION['current_event'] = $row;
 
     $params['event'] = $row;
 }
