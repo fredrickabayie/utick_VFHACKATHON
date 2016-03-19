@@ -10,7 +10,7 @@ session_start();
 
 require_once '../sms_module/event_sms_sender.php';
 
-$ticket_info = "Dear Customer: \r\n Ticket Receipt";
+$ticket_info = "Dear Customer: \r\n Ticket Receipt \r\n";
 
 $ticket_info.= "Event : ".$_SESSION['current_event']['name']."\r\n";
 $ticket_info.= "Cost : ".$_SESSION['current_event']['cost']."\r\n";
@@ -21,6 +21,8 @@ $ticket_info.= "Transaction Date : ".date("Y/m/d")." : ".date("h:i:sa")."\r\n";
 
 //sendSMS("+233209339957", $ticket_info);
 sendSMS("+233200393945", $ticket_info);
+
+header("Location: ../views/index.php");
 
 /**
  * Obtained from stack over flow
