@@ -104,3 +104,4 @@ class events extends adb_object{
         return $this->query($str_query);
     }
 }
+

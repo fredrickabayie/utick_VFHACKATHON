@@ -1,0 +1,37 @@
+
+{% extends "home.html.twig" %}
+
+{% block CAROUSEL %}
+
+{% endblock %}
+
+{% block EVENTS %}
+    <div class="product-details"><!--product-details-->
+        <div class="col-sm-5">
+            <div class="view-product">
+                <img src="images/product-details/1.jpg" alt="" />
+            </div>
+        </div>
+
+        <div class="col-sm-7">
+            <div class="product-information"><!--/product-information-->
+                <img src="images/product-details/new.jpg" class="newarrival" alt="" />
+                <h2>{{ event.name }}</h2>
+                <p>Event ID: {{ event.event_id }}</p>
+                <img src="images/product-details/rating.png" alt="" />
+								<span>
+									<span>GHS {{ event.cost }}</span>
+									<label>Available Seats: </label>
+									<input type="text" value="{{ event.seats }}" />
+								</span>
+                <a type="button" class="btn btn-fefault cart" href="">
+                    <i class="fa fa-shopping-cart"></i>
+                    Buy Ticket
+                </a>
+                <a type="button" class="btn btn-fefault cart" href="SeatPreview/index.php">
+                    <i class="fa fa-video-camera"></i>
+                    View Seat Preview
+                </a>
+            </div><!--/product-information-->
+        </div>
+{% endblock %}

@@ -49,4 +49,16 @@ class user extends adb_object{
 
         return $this->query($str_query);
     }
+
+
+    /**
+     *
+     */
+    function fetch_users()
+    {
+
+        $str_query = "SELECT * FROM users";
+
+        return $this->query($str_query);
+    }
 }
