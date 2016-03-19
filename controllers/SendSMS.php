@@ -16,7 +16,13 @@ $ticket_info.= "Event : ".$_SESSION['current_event']['name']."\r\n";
 $ticket_info.= "Cost : ".$_SESSION['current_event']['cost']."\r\n";
 $ticket_info.= "Event Date : ".$_SESSION['current_event']['date']."\r\n";
 $ticket_info.= "Event Time : ".$_SESSION['current_event']['time']."\r\n";
-$ticket_info.= "Transaction ID : ".incrementalHash(10)."\r\n";
+
+$transaction_id = incrementalHash(10);
+$transaction_id .= date("Y")."".date("m")."".date("m")."".date("h")."".date("i")."".date("sa");
+
+$ticket_info.= "Transaction ID : ".$transaction_id."\r\n";
+
+
 $ticket_info.= "Transaction Date : ".date("Y/m/d")." : ".date("h:i:sa")."\r\n";
 
 //sendSMS("+233209339957", $ticket_info);
